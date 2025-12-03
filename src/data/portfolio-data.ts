@@ -52,6 +52,8 @@ export const portfolioData = {
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/username/project1",
     },
+
+
     {
       id: 2,
       title: "Task Management App",
@@ -76,6 +78,18 @@ export const portfolioData = {
       liveUrl: "https://example.com",
       githubUrl: "https://github.com/username/project3",
     },
+        {
+  id:4 ,
+  title: "AI Lead Assistant System",
+  description: "An AI-powered lead automation system with real-time chat, smart lead qualification, and workflow automation for businesses.",
+  problem: "Businesses were losing leads due to delayed responses, manual follow-ups, and unstructured customer data.",
+  solution: "Built an AI-driven assistant using a custom backend with automation workflows to capture, qualify, and route leads automatically in real time.",
+  impact: "Improved lead response time and enabled faster follow-ups with fully automated lead handling and centralized data collection.",
+  image: "/ai-lead-assistant.jpg",
+  tech: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "Groq AI", "n8n", "Webhooks"],
+  liveUrl: "https://your-demo-link.com",
+  githubUrl: "https://github.com/yourusername/ai-lead-assistant"
+},
   ],
   education: [
     {
