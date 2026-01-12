@@ -19,6 +19,22 @@ export function Hero() {
     setParticles(newParticles);
   }, []);
 
+  const handleHireMe = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleDownloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/my_resume.pdf";
+    link.download = "Muchintala_Chandrasu_Karthikeya_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradient */}
@@ -91,11 +107,11 @@ export function Hero() {
             transition={{ delay: 0.8, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
-            <Button size="lg" className="group">
+            <Button size="lg" className="group" onClick={handleHireMe}>
               <Mail className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
               {portfolioData.hero.cta.primary}
             </Button>
-            <Button variant="outline" size="lg" className="group">
+            <Button variant="outline" size="lg" className="group" onClick={handleDownloadResume}>
               <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
               {portfolioData.hero.cta.secondary}
             </Button>
