@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { portfolioData } from "@/data/portfolio-data";
+import { div } from "framer-motion/m";
 
 export function About() {
   return (
@@ -36,20 +38,18 @@ export function About() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="relative w-80 h-80 mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-3xl opacity-30" />
-                <div className="relative w-full h-full bg-muted rounded-full flex items-center justify-center">
-                  <span className="text-6xl">👨‍💻</span>
-                </div>
+            <div className="relative w-80 h-80 mx-auto">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-3xl opacity-30" />
+              <div className="relative w-full h-full bg-muted rounded-full flex items-center justify-center overflow-hidden">
+                <Image
+                  src={portfolioData.about.image}
+                  alt="Profile Picture"
+                  width={520}
+                  height={520}
+                  className="rounded-full object-cover w-full h-full"
+                />
               </div>
-            </motion.div>
+            </div>
 
             {/* Content */}
             <motion.div

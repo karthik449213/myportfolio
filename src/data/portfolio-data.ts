@@ -10,8 +10,8 @@ export const portfolioData = {
   },
   about: {
     bio: "I'm a passionate full-stack developer with expertise in modern web technologies. I love creating beautiful, functional, and user-centered digital experiences.",
-    image: "/placeholder-avatar.jpg",
-    currentlyLearning: ["Next.js 15", "AI/ML", "Cloud Architecture"],
+    image: "/profile.png",
+    currentlyLearning: ["Next.js 16", "AI/ML", "Cloud Architecture"],
     interests: ["Open Source", "UI/UX Design", "Tech Blogging"],
   },
   skills: {

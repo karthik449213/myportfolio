@@ -28,7 +28,7 @@ export function Hero() {
 
   const handleDownloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/my_resume.pdf";
+    link.href = "/karthikresume.pdf";
     link.download = "Muchintala_Chandrasu_Karthikeya_Resume.pdf";
     document.body.appendChild(link);
     link.click();
