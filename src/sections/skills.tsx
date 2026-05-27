@@ -5,11 +5,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { portfolioData } from "@/data/portfolio-data";
 
 const skillCategories = [
-  { key: "frontend", title: "Frontend", icon: "💻" },
-  { key: "backend", title: "Backend", icon: "⚙️" },
-  { key: "design", title: "Design", icon: "🎨" },
+  { key: "languages", title: "Languages", icon: "💻" },
+  { key: "cryptography", title: "Cryptography", icon: "🔐" },
+  { key: "blockchain", title: "Blockchain", icon: "⛓️" },
+  { key: "systems", title: "Systems", icon: "🖥️" },
   { key: "tools", title: "Tools", icon: "🛠️" },
 ] as const;
+
+type Skill = { name: string; level: number };
 
 export function Skills() {
   return (
@@ -41,7 +44,7 @@ export function Skills() {
             />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {skillCategories.map((category, categoryIndex) => (
               <motion.div
                 key={category.key}
@@ -57,7 +60,7 @@ export function Skills() {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3">
-                      {portfolioData.skills[category.key].map((skill, skillIndex) => (
+                      {(((portfolioData.skills as unknown) as Record<string, Skill[]>)[category.key] ?? []).map((skill, skillIndex) => (
                         <motion.div
                           key={skill.name}
                           initial={{ opacity: 0, x: -20 }}
