@@ -1,6 +1,6 @@
 export const portfolioData = {
   hero: {
-    name: "Aryan",
+    name: "MUCHINTALA CHANDRASU KARTHIKEYA",
     title: "Systems & Cryptography Engineer",
     tagline: "Building trustless systems, encrypted networks, and zero-knowledge infrastructure.",
     cta: {
@@ -10,7 +10,7 @@ export const portfolioData = {
   },
 
   about: {
-    bio: "I'm a systems engineer focused on low-level cryptographic protocols, zero-knowledge proof systems, and decentralized network architecture. I build production-grade tools in Rust and Go — from encrypted dark-channel messengers to zk-SNARK exchange networks — with a core focus on privacy, trustlessness, and security. Currently pursuing B.Tech in Computer Science (2024–2028) while shipping real systems.",
+    bio: "I'm a systems engineer focused on low-level cryptographic protocols, zero-knowledge proof systems, and decentralized network architecture. I build production-grade tools in Rust and Go from encrypted dark-channel messengers to zk-SNARK exchange networks with a core focus on privacy, trustlessness, and security. Currently pursuing B.Tech in Computer Science (2024–2028) while shipping real systems.",
     image: "/profile.png",
     currentlyLearning: [
       "Advanced zkSNARK circuit design (Circom/Groth16)",
@@ -106,14 +106,14 @@ export const portfolioData = {
       id: 1,
       title: "NetSniff Android",
       description:
-        "High-performance local network packet analyzer using raw OS-level access for real-time traffic diagnostics on Android — no root required.",
+        "High-performance local network packet analyzer using raw OS-level access for real-time traffic diagnostics on Android no root required.",
       problem:
         "Android developers and network engineers had no reliable tool to inspect raw IP/TCP/UDP traffic at the packet level without rooting the device.",
       solution:
         "Built a native Kotlin + C++ (NDK) app using the Android VpnService API to intercept device-wide traffic. Implemented JNI memory pinning via GetByteArrayElements to pass raw binary packet buffers from C++ to a reactive Jetpack Compose UI without GC pauses.",
       impact:
         "Achieved low-latency real-time packet visualization with zero GC interruption using POSIX socket programming and multi-threaded JNI layers for OS-level binary data handling.",
-      image: "/netsniff.png",
+      image: "/netsniff.jpg",
       tech: [
         "Kotlin",
         "C/C++ (NDK)",
@@ -131,7 +131,7 @@ export const portfolioData = {
         "OS Service Binding",
       ],
       liveUrl: "",
-      githubUrl: "https://github.com/aryan/netsniff-android",
+      githubUrl: "https://github.com/blazzerbrand-dot/NetSniffAndroid.git",
       apkUrl: "",
     },
 
@@ -139,14 +139,14 @@ export const portfolioData = {
       id: 2,
       title: "CoreVault OS",
       description:
-        "Hardware-grade encrypted filesystem for Android using TEE/StrongBox isolated execution, AES-GCM authenticated encryption, and sector-level database encryption — no third-party cloud dependency.",
+        "Hardware-grade encrypted filesystem for Android using TEE/StrongBox isolated execution, AES-GCM authenticated encryption, and sector-level database encryption no third-party cloud dependency.",
       problem:
-        "Android file storage is vulnerable at rest — standard app sandboxing does not protect against physical device access, key extraction, or biometric bypass attacks.",
+        "Android file storage is vulnerable at rest standard app sandboxing does not protect against physical device access, key extraction, or biometric bypass attacks.",
       solution:
         "Ran cryptographic operations inside a dedicated StrongBox hardware security module isolated from the main processor. Applied AES-GCM symmetric encryption with built-in integrity checks across all stored data. Injected a custom sandboxed storage location directly into the native Android file picker via DocumentsProvider. Implemented auto-invalidation of Keystore encryption keys on new biometric enrollment. Encrypted raw storage sectors using SQLCipher before data hits the permanent filesystem.",
       impact:
-        "Achieved hardware-enforced encryption at rest with automatic key invalidation on security events — vault contents are inaccessible even with physical device access or root.",
-      image: "/corevault.png",
+        "Achieved hardware-enforced encryption at rest with automatic key invalidation on security events vault contents are inaccessible even with physical device access or root.",
+      image: "/os.jpg",
       tech: [
         "Kotlin",
         "Android Keystore",
@@ -165,7 +165,7 @@ export const portfolioData = {
         "Unidirectional Data Flow (MVI)",
       ],
       liveUrl: "",
-      githubUrl: "https://github.com/aryan/corevault",
+      githubUrl:  "https://github.com/blazzerbrand-dot/corevaultos.git",
       apkUrl: "",
     },
 
@@ -180,7 +180,7 @@ export const portfolioData = {
         "Designed a Go-based distributed mesh network for high-throughput binary transfers. Built a Node.js WebSocket signaling layer for peer discovery, handshake negotiation, and session management without a central broker.",
       impact:
         "Achieved fully decentralized file synchronization with eventual consistency across all mesh nodes and no relay dependency.",
-      image: "/p2psharing.png",
+      image: "/files.jpg",
       tech: ["Go", "Node.js", "WebSockets", "P2P Networking"],
       concepts: [
         "Distributed Mesh",
@@ -190,7 +190,7 @@ export const portfolioData = {
         "Binary Transfer",
       ],
       liveUrl: "",
-      githubUrl: "https://github.com/aryan/p2psharing",
+      githubUrl: "https://github.com/prompte718-alt/p2psharing.gitt",
     },
 
     {
@@ -199,12 +199,12 @@ export const portfolioData = {
       description:
         "Privacy-first encrypted messaging platform built for dark-channel communication with zero metadata leakage and anonymous routing.",
       problem:
-        "Existing messaging platforms leak metadata — sender identity, timing, and routing — even when message content is encrypted.",
+        "Existing messaging platforms leak metadata sender identity, timing, and routing even when message content is encrypted.",
       solution:
         "Engineered an end-to-end encrypted message pipeline in Rust with forward secrecy and no plaintext storage. Implemented an anonymous routing layer that obscures both sender and receiver identity and resists traffic correlation attacks. Python tooling handles key management and protocol fuzzing.",
       impact:
         "Achieved full anonymity at the transport layer with provably zero metadata exposure and resistance to passive traffic analysis.",
-      image: "/darkmessenger.png",
+      image: "/darkmesangers.jpg",
       tech: ["Rust", "Python", "E2E Encryption", "Anonymous Routing"],
       concepts: [
         "Forward Secrecy",
@@ -214,21 +214,21 @@ export const portfolioData = {
         "Key Management",
       ],
       liveUrl: "",
-      githubUrl: "https://github.com/aryan/darkmessenger",
+      githubUrl: "https://github.com/prompte718-alt/darkmessanger.git",
     },
 
     {
       id: 5,
       title: "Delay-Tolerant Blockchain",
       description:
-        "Offline-first blockchain network designed for unstable mesh environments — nodes store, carry, and forward transactions until connectivity is restored, achieving eventual consistency without a live network.",
+        "Offline-first blockchain network designed for unstable mesh environments nodes store, carry, and forward transactions until connectivity is restored, achieving eventual consistency without a live network.",
       problem:
         "Conventional blockchains require continuous internet connectivity for transaction propagation and consensus. They fail completely in intermittent, high-latency, or offline mesh network environments such as disaster zones, rural infrastructure, or air-gapped networks.",
       solution:
         "Implemented a store-carry-forward model in Go where nodes cache unconfirmed transactions locally and opportunistically sync when peers are in range. Used libp2p for peer discovery and transport across unstable links. LevelDB/RocksDB handles durable local storage of the chain state. Protocol Buffers serialize block and transaction data for efficient binary exchange.",
       impact:
-        "Achieved eventual consistency across fully disconnected mesh nodes — transactions survive arbitrarily long network partitions and propagate automatically when connectivity resumes.",
-      image: "/dtblockchain.png",
+        "Achieved eventual consistency across fully disconnected mesh nodes transactions survive arbitrarily long network partitions and propagate automatically when connectivity resumes.",
+      image: "/blockchain.jpg",
       tech: ["Go", "libp2p", "LevelDB", "RocksDB", "Protocol Buffers"],
       concepts: [
         "Store-Carry-Forward",
@@ -239,7 +239,7 @@ export const portfolioData = {
         "Edge Computing",
       ],
       liveUrl: "",
-      githubUrl: "https://github.com/aryan/Delay-Tolerant-Blockchain",
+      githubUrl: "https://github.com/prompte718-alt/Delay-Tolerant-Blockchain.git",
     },
 
     {
@@ -248,12 +248,12 @@ export const portfolioData = {
       description:
         "Privacy-preserving decentralized exchange using zero-knowledge proofs to enable confidential transactions without revealing trade details on-chain.",
       problem:
-        "On-chain DEXs expose transaction amounts, counterparties, and timing — making front-running, surveillance, and MEV attacks trivial.",
+        "On-chain DEXs expose transaction amounts, counterparties, and timing making front-running, surveillance, and MEV attacks trivial.",
       solution:
         "Designed Circom circuits for zkSNARK proof generation enabling on-chain verification without exposing transaction values or identities. Built a Rust proof-verification engine integrating the zk-SNARK backend with the DEX settlement layer.",
       impact:
-        "Enabled confidential transaction finality with full on-chain auditability — amounts and identities hidden, proofs publicly verifiable.",
-      image: "/zkp-exchange.png",
+        "Enabled confidential transaction finality with full on-chain auditability amounts and identities hidden, proofs publicly verifiable.",
+      image: "/zkp.jpg",
       tech: ["Rust", "Circom", "zkSNARKs", "Zero-Knowledge Proofs"],
       concepts: [
         "zkSNARKs",
@@ -263,7 +263,7 @@ export const portfolioData = {
         "Trustless DEX",
       ],
       liveUrl: "",
-      githubUrl: "https://github.com/aryan/zkp-exchange-network",
+      githubUrl: "https://github.com/prompte718-alt/zkp-exchange-network.git",
     },
 
     {
@@ -272,12 +272,12 @@ export const portfolioData = {
       description:
         "Decentralized on-chain voting platform with tamper-proof smart contract governance, token-based access control, and IPFS ballot storage.",
       problem:
-        "Traditional e-voting systems rely on centralized servers — vulnerable to manipulation, censorship, and lack of transparent auditability.",
+        "Traditional e-voting systems rely on centralized servers vulnerable to manipulation, censorship, and lack of transparent auditability.",
       solution:
         "Wrote Solidity smart contracts enforcing vote uniqueness, immutable records, and transparent election lifecycle. Integrated Web3.js + MetaMask for wallet-based voter authentication. Stored ballot metadata on IPFS for censorship-resistant governance records.",
       impact:
-        "Delivered fully trustless voting with on-chain immutability and decentralized ballot storage — no central authority can alter or suppress votes.",
-      image: "/voting.png",
+        "Delivered fully trustless voting with on-chain immutability and decentralized ballot storage no central authority can alter or suppress votes.",
+      image: "/blockchainvoting.jpg",
       tech: [
         "Solidity",
         "Ethereum",
@@ -294,21 +294,21 @@ export const portfolioData = {
         "Immutable Records",
       ],
       liveUrl: "",
-      githubUrl: "https://github.com/aryan/blockchainbasedvotingsystem",
+      githubUrl: "https://github.com/prompte718-alt/blockchainbasedvotinsystem.git",
     },
 
     {
       id: 8,
       title: "deadmanswitch",
       description:
-        "Cryptographic inactivity-triggered asset distribution system — if an owner fails to check in, encrypted vaults unlock and assets distribute to guardians via threshold cryptography.",
+        "Cryptographic inactivity-triggered asset distribution system if an owner fails to check in, encrypted vaults unlock and assets distribute to guardians via threshold cryptography.",
       problem:
-        "Crypto asset holders have no reliable, trustless mechanism to ensure their assets reach designated beneficiaries in case of prolonged inactivity or death — without trusting any third party.",
+        "Crypto asset holders have no reliable, trustless mechanism to ensure their assets reach designated beneficiaries in case of prolonged inactivity or death without trusting any third party.",
       solution:
         "Implemented Shamir Secret Sharing to split vault decryption keys across multiple guardian keyholders with configurable thresholds. Built an Ed25519 heartbeat signing mechanism for owners to prove liveness without exposing private keys. Smart contract layer (Hardhat/Ethers.js) triggers automatic asset release after a configurable inactivity window.",
       impact:
-        "Achieved fully trustless dead-man's-switch mechanics — no single guardian or contract owner can unilaterally access vaults; release requires threshold consensus.",
-      image: "/deadmanswitch.png",
+        "Achieved fully trustless dead-man's-switch mechanics no single guardian or contract owner can unilaterally access vaults; release requires threshold consensus.",
+      image: "/deadmanswitch.jpg",
       tech: [
         "TypeScript",
         "JavaScript",
@@ -327,21 +327,21 @@ export const portfolioData = {
         "Guardian Key Shares",
       ],
       liveUrl: "",
-      githubUrl: "https://github.com/aryan/deadmanswitch",
+      githubUrl: "https://github.com/prompte718-alt/deadmanswitch.git",
     },
 
     {
       id: 9,
       title: "distributed_log_monitoring",
       description:
-        "Real-time distributed log aggregation and anomaly detection system — centralizes logs from multiple services, traces distributed events, and surfaces anomalies across a live system.",
+        "Real-time distributed log aggregation and anomaly detection system centralizes logs from multiple services, traces distributed events, and surfaces anomalies across a live system.",
       problem:
-        "In distributed systems, logs are scattered across services and machines with no unified view — making debugging, tracing, and anomaly detection slow and unreliable.",
+        "In distributed systems, logs are scattered across services and machines with no unified view making debugging, tracing, and anomaly detection slow and unreliable.",
       solution:
         "Built a Python-based centralized log aggregation pipeline that collects structured logs from distributed nodes in real time. Implemented distributed tracing to correlate events across service boundaries. TypeScript dashboard surfaces metrics and anomalies with live updates. Anomaly detection layer flags irregular patterns automatically.",
       impact:
-        "Achieved full observability across distributed services — single pane for log aggregation, distributed tracing, metrics, and anomaly alerts in real time.",
-      image: "/logmonitoring.png",
+        "Achieved full observability across distributed services single pane for log aggregation, distributed tracing, metrics, and anomaly alerts in real time.",
+      image: "/distributedlogs.jpg",
       tech: ["Python", "TypeScript", "Logging Frameworks", "Real-time Processing"],
       concepts: [
         "Centralized Log Aggregation",
@@ -351,7 +351,7 @@ export const portfolioData = {
         "Observability",
       ],
       liveUrl: "",
-      githubUrl: "https://github.com/aryan/distributed_log_monitoring",
+      githubUrl: "https://github.com/prompte718-alt/distributed_log_monitoring.git",
     },
 
     {
@@ -360,7 +360,7 @@ export const portfolioData = {
       description:
         "Automated vehicle license plate detection and character recognition system using deep learning object detection and OCR on live or static image input.",
       problem:
-        "Manual vehicle identification is slow and error-prone — there was no lightweight pipeline to extract and parse license plate data from images automatically.",
+        "Manual vehicle identification is slow and error-prone there was no lightweight pipeline to extract and parse license plate data from images automatically.",
       solution:
         "Built a Python pipeline using YOLO/CNN for license plate region detection and OpenCV for image preprocessing and segmentation. Integrated OCR to extract and parse alphanumeric characters from detected plate regions. Deep learning backbone handles varied lighting, angles, and plate formats.",
       impact:
@@ -375,7 +375,7 @@ export const portfolioData = {
         "Image Segmentation",
       ],
       liveUrl: "",
-      githubUrl: "https://github.com/aryan/numberplaterecognition",
+      githubUrl: "https://github.com/prompte718-alt/numberplaterecognition.git",
     },
 
     {
@@ -384,12 +384,12 @@ export const portfolioData = {
       description:
         "Real-time video analytics platform for ML-powered frame analysis, pattern recognition, and computer vision inference with a live TypeScript dashboard.",
       problem:
-        "Processing and extracting meaningful signals from video streams in real time requires both efficient frame-level ML inference and a responsive visualization layer — rarely combined in one system.",
+        "Processing and extracting meaningful signals from video streams in real time requires both efficient frame-level ML inference and a responsive visualization layer rarely combined in one system.",
       solution:
         "Built a Python backend using OpenCV for frame extraction and preprocessing with TensorFlow/PyTorch for real-time ML inference. TypeScript dashboard streams analysis results live. Pattern recognition layer identifies objects, behaviors, and anomalies across frames.",
       impact:
-        "Achieved real-time video intelligence — frame-by-frame ML inference with live result streaming to a reactive dashboard for immediate pattern visibility.",
-      image: "/videoanalytics.png",
+        "Achieved real-time video intelligence frame-by-frame ML inference with live result streaming to a reactive dashboard for immediate pattern visibility.",
+      image: "/vidreoanlatics.jpg",
       tech: [
         "Python",
         "OpenCV",
@@ -406,21 +406,21 @@ export const portfolioData = {
         "Pattern Recognition",
       ],
       liveUrl: "",
-      githubUrl: "https://github.com/aryan/videoanalytics",
+      githubUrl: "https://github.com/prompte718-alt/videoanaltyics.git",
     },
 
     {
       id: 12,
       title: "HyperKernel Android",
       description:
-        "Full Android-native micro-virtualization platform that runs apps and services inside lightweight sandboxed environments directly on mobile devices — no cloud, no hypervisor hardware dependency.",
+        "Full Android-native micro-virtualization platform that runs apps and services inside lightweight sandboxed environments directly on mobile devices no cloud, no hypervisor hardware dependency.",
       problem:
         "Android has no native micro-virtualization layer for isolating untrusted app execution at the kernel level. Running sandboxed services requires either full VMs (too heavy) or process isolation (insufficient security boundary).",
       solution:
         "Built a mobile-native virtualization runtime that creates lightweight isolated execution containers on Android. Each sandbox runs with its own restricted kernel interface, isolated memory space, and scoped system call access. The platform manages sandbox lifecycle, resource allocation, and inter-sandbox communication with minimal overhead on constrained mobile hardware.",
       impact:
-        "Achieved kernel-level execution isolation for arbitrary app workloads directly on mobile — enabling untrusted code execution, AI runtime sandboxing, and secure multi-tenant service hosting without cloud dependency.",
-      image: "/hyperkernel.png",
+        "Achieved kernel-level execution isolation for arbitrary app workloads directly on mobile enabling untrusted code execution, AI runtime sandboxing, and secure multi-tenant service hosting without cloud dependency.",
+      image: "/hyperkernel.jpg",
       tech: [
         "Kotlin",
         "C/C++ (NDK)",
@@ -437,7 +437,7 @@ export const portfolioData = {
         "Resource Isolation",
       ],
       liveUrl: "",
-      githubUrl: "https://github.com/aryan/hyperkernel-android",
+      githubUrl: "https://github.com/blazzerbrand-dot/HyperKernelAndroid.git",
       apkUrl: "",
     },
 
@@ -445,14 +445,14 @@ export const portfolioData = {
       id: 13,
       title: "NeuralMesh OS",
       description:
-        "Decentralized AI mesh network where nearby Android devices cooperate to share compute, distribute inference workloads, exchange encrypted data, and form resilient peer-to-peer clusters — fully cloud-independent.",
+        "Decentralized AI mesh network where nearby Android devices cooperate to share compute, distribute inference workloads, exchange encrypted data, and form resilient peer-to-peer clusters fully cloud-independent.",
       problem:
-        "On-device AI inference is bottlenecked by single-device compute limits. Cloud offloading introduces latency, privacy risks, and hard dependency on connectivity — making edge AI impractical for real-time or offline use cases.",
+        "On-device AI inference is bottlenecked by single-device compute limits. Cloud offloading introduces latency, privacy risks, and hard dependency on connectivity making edge AI impractical for real-time or offline use cases.",
       solution:
-        "Built a device-to-device mesh fabric where Android nodes discover peers, negotiate compute capacity, and split AI inference tasks across the cluster. Encrypted data exchange ensures privacy across untrusted nodes. The mesh is self-healing — nodes join and leave without disrupting active inference pipelines. Distributed scheduling layer routes workloads to the most available device dynamically.",
+        "Built a device-to-device mesh fabric where Android nodes discover peers, negotiate compute capacity, and split AI inference tasks across the cluster. Encrypted data exchange ensures privacy across untrusted nodes. The mesh is self-healing nodes join and leave without disrupting active inference pipelines. Distributed scheduling layer routes workloads to the most available device dynamically.",
       impact:
-        "Achieved distributed real-time AI inference across a cluster of commodity Android devices with zero cloud dependency — compute scales with the number of nearby devices in the mesh.",
-      image: "/neuralmesh.png",
+        "Achieved distributed real-time AI inference across a cluster of commodity Android devices with zero cloud dependency compute scales with the number of nearby devices in the mesh.",
+      image: "/neutalmeshos.jpg",
       tech: [
         "Kotlin",
         "C/C++ (NDK)",
@@ -470,7 +470,7 @@ export const portfolioData = {
         "Offline AI Runtime",
       ],
       liveUrl: "",
-      githubUrl: "https://github.com/aryan/neuralmesh-os",
+      githubUrl: "https://github.com/blazzerbrand-dot/NeuralMeshOs.git",
       apkUrl: "",
     },
 
@@ -478,14 +478,14 @@ export const portfolioData = {
       id: 14,
       title: "Synapse Fabric",
       description:
-        "Fully autonomous distributed execution fabric where every machine — phones, laptops, servers, edge devices — becomes part of one self-healing compute organism that routes and executes workloads automatically.",
+        "Fully autonomous distributed execution fabric where every machine phones, laptops, servers, edge devices becomes part of one self-healing compute organism that routes and executes workloads automatically.",
       problem:
-        "Heterogeneous compute environments — mixing phones, laptops, and edge hardware — have no unified execution layer. Workloads are siloed per device with no cross-machine scheduling, fault tolerance, or autonomous recovery.",
+        "Heterogeneous compute environments mixing phones, laptops, and edge hardware have no unified execution layer. Workloads are siloed per device with no cross-machine scheduling, fault tolerance, or autonomous recovery.",
       solution:
-        "Built a self-organizing compute fabric where each node registers its capabilities and available resources. A distributed task scheduler routes execution units to the most suitable node dynamically. The fabric is self-healing — failed nodes are detected, workloads are rerouted, and the cluster rebalances automatically. Nodes communicate over an encrypted mesh transport layer with no central coordinator.",
+        "Built a self-organizing compute fabric where each node registers its capabilities and available resources. A distributed task scheduler routes execution units to the most suitable node dynamically. The fabric is self-healing failed nodes are detected, workloads are rerouted, and the cluster rebalances automatically. Nodes communicate over an encrypted mesh transport layer with no central coordinator.",
       impact:
-        "Achieved a fully autonomous multi-device compute organism — workloads execute across heterogeneous hardware with automatic failover, rebalancing, and zero central coordination.",
-      image: "/synapsefabric.png",
+        "Achieved a fully autonomous multi-device compute organism workloads execute across heterogeneous hardware with automatic failover, rebalancing, and zero central coordination.",
+      image: "/SynapseFabric.png",
       tech: [
         "Go",
         "Rust",
@@ -503,7 +503,7 @@ export const portfolioData = {
         "Edge Compute Orchestration",
       ],
       liveUrl: "",
-      githubUrl: "https://github.com/aryan/synapse-fabric",
+      githubUrl: "https://github.com/blazzerbrand-dot/synapsefabric.git",
     },
 
     {
@@ -512,12 +512,12 @@ export const portfolioData = {
       description:
         "Offensive-grade Android security research framework for dynamic binary instrumentation, syscall interception, runtime exploit detection, anti-hooking, anti-tamper, memory forensics, and behavior analysis.",
       problem:
-        "Android security research lacks a unified native framework for deep runtime inspection — existing tools are fragmented, require root, or operate at too high an abstraction level to detect sophisticated exploits and evasion techniques.",
+        "Android security research lacks a unified native framework for deep runtime inspection existing tools are fragmented, require root, or operate at too high an abstraction level to detect sophisticated exploits and evasion techniques.",
       solution:
         "Built a low-level Android security research platform combining dynamic binary instrumentation to rewrite running code at the instruction level, syscall interception to monitor and block OS-level calls in real time, and runtime exploit detection to catch memory corruption and privilege escalation attempts. Anti-hooking and anti-tamper layers detect and resist instrumentation by third-party tools. Memory forensics engine scans live process memory for IOCs and anomalous patterns. Behavior analysis correlates syscall sequences and memory events into high-level threat signatures.",
       impact:
-        "Achieved deep runtime visibility into Android process internals — capable of detecting, intercepting, and analyzing exploits, hooks, and malicious behavior at the binary and syscall level without requiring a rooted device.",
-      image: "/phantomcore.png",
+        "Achieved deep runtime visibility into Android process internals capable of detecting, intercepting, and analyzing exploits, hooks, and malicious behavior at the binary and syscall level without requiring a rooted device.",
+      image: "/PhantomCore.png",
       tech: [
         "C/C++ (NDK)",
         "Kotlin",
@@ -536,21 +536,21 @@ export const portfolioData = {
         "Behavior Analysis",
       ],
       liveUrl: "",
-      githubUrl: "https://github.com/aryan/phantomcore",
+      githubUrl: "https://github.com/blazzerbrand-dot/PhantomCore.git",
       apkUrl: "",
     },
   ],
 
   education: [
     {
-      degree: "Bachelor of Technology — Computer Science Engineering",
+      degree: "Bachelor of Technology  Computer Science Engineering",
       institution: "Lakireddy Bali Reddy College of Engineering",
       year: "2024 – 2028",
       description:
         "Focused on systems programming, algorithms, network security, and distributed computing. Building production cryptographic systems alongside coursework.",
     },
     {
-      degree: "Intermediate — MPC",
+      degree: "Intermediate  MPC",
       institution: "Sri Chaitanya Junior College",
       year: "2022 – 2024",
       description: "Mathematics, Physics, Chemistry.",
@@ -558,8 +558,8 @@ export const portfolioData = {
   ],
 
   contact: {
-    email: "aryan@email.com",
-    github: "https://github.com/aryan",
+    email: "karthikpiinasi@gmail.com",
+    github: "https://github.com/prompte718-alt/",
     linkedin: "",
     twitter: "",
     note: "Best reached via GitHub or email. Open to remote internships and contract roles globally.",

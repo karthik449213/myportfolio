@@ -31,9 +31,9 @@ export function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold mb-4"
+              className="text-3xl md:text-4xl font-bold mb-4"
             >
-              Skills & Expertise
+              Skills
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -55,7 +55,7 @@ export function Skills() {
               >
                 <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                   <CardHeader className="text-center">
-                    <div className="text-4xl mb-2">{category.icon}</div>
+                    <div className="text-3xl md:text-4xl mb-2">{category.icon}</div>
                     <CardTitle className="text-xl">{category.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
